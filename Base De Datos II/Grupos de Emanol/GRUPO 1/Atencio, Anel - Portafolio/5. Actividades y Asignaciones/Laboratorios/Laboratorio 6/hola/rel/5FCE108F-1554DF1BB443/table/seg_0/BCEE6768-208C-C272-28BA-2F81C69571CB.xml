@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BCEE6768-208C-C272-28BA-2F81C69571CB" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="TRANSACT_PAGOS">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>TRANSACT_PAGOS</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TRANSACCION" id="304F574D-05FF-FD6A-0D9D-2CAADAFD4856">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>ID_TRANSACCION</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_SUCURSAL" id="4B4CD2CC-124D-7A3E-527D-C1DAAF00CAFF">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>COD_SUCURSAL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CLIENTE" id="0EB0851D-3F3D-7FCB-191C-8D56961A1DDA">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>ID_CLIENTE</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO" id="4F86E8A6-73D9-DB12-43C8-45B19A24A15E">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>ID_TIPO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHATRANSACCION" id="728F843A-2B3D-BD00-3D57-CD0D400DE3AA">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>FECHATRANSACCION</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTO_PAGO" id="D8ED6B3C-9C9F-23C0-4B17-2DC4F66F71E3">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>MONTO_PAGO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INSERCION" id="11BFAB93-EC87-C087-5DE9-5DD8309A2279">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>FECHA_INSERCION</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO" id="7AB6C638-6254-F0EF-AFF1-21079DDFD6F2">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TRANSACT_PAGOS</sourceObjSchema>
+<sourceObjName>USUARIO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78DBF639-5926-470B-E755-0C7F0E25AAA8" name="ID_TRANSACCION_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>ID_TRANSACCION_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="304F574D-05FF-FD6A-0D9D-2CAADAFD4856"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="22E72A41-8937-2D00-9E55-EEA0066480D4" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="ID_TRANSACCION_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>ID_TRANSACCION_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="304F574D-05FF-FD6A-0D9D-2CAADAFD4856"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

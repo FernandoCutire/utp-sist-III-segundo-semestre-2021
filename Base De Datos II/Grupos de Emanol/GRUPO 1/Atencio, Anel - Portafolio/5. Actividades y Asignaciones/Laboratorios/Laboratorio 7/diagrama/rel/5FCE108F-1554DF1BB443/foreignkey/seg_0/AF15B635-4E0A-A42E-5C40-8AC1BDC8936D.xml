@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AF15B635-4E0A-A42E-5C40-8AC1BDC8936D" containerWithKeyObject="DD7A65EA-9139-6FE8-0677-F6EE03820DB3" localFKIndex="49D11C5C-9DC7-59BE-D8FD-1C0E3FA7DF88" name="ID_PROF_FK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_PROF_FK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>4DDE1424-1477-04EE-63D4-5474A9AC0759</importedID>
+<referredTableLongName>LAB7_P.PROFESION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B7C51EED-E737-9AFD-AFC1-A7B2F146CCE7</referredTableID>
+<keyObject>2DDD80C2-2432-DDF5-C200-7A2428195410</keyObject>
+<referredKeyID>2DDD80C2-2432-DDF5-C200-7A2428195410</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PRO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

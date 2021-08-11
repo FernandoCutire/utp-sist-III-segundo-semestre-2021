@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7791A3B-1ED6-6185-311C-0E1EE9189824" schemaObject="292C14E3-9BDF-4416-FE92-9FAB27818897" name="TIPO_TRANSACCION">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>TIPO_TRANSACCION</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:06 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_TRANSC" id="019CA7EB-4315-59EC-FA7A-7807639AE727">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TIPO_TRANSACCION</sourceObjSchema>
+<sourceObjName>ID_TIPO_TRANSC</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRANSACCION" id="787768C4-318A-B437-2E7A-CFD95447D9B1">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TIPO_TRANSACCION</sourceObjSchema>
+<sourceObjName>TRANSACCION</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF0ADDD3-4EFC-1B66-467A-7DCE5385C6C1" name="ID_TRANSAC_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_TRANSAC_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="019CA7EB-4315-59EC-FA7A-7807639AE727"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31D5C951-4CCE-A1AA-26EF-D07CF0158DDC" schemaObject="292C14E3-9BDF-4416-FE92-9FAB27818897" name="ID_TRANSAC_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_TRANSAC_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="019CA7EB-4315-59EC-FA7A-7807639AE727"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

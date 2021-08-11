@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="53442DB0-A922-B325-DC16-AA5C372CE8A4" containerWithKeyObject="2ECD3B42-2CE3-5AFF-FAB7-AC7E62D02FBE" localFKIndex="35FC4AE7-098F-313C-C84F-549DCAFA322C" name="ID_EMAIL_FK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_EMAIL_FK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>2E81EDE3-743D-3626-B007-658A743F9B9E</importedID>
+<referredTableLongName>LAB7_P.EMAIL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A4F6FA74-8AF3-B987-9B8E-BA2E8123EDA4</referredTableID>
+<keyObject>886C756F-66A8-F4E6-DF13-ED503F9DEE39</keyObject>
+<referredKeyID>886C756F-66A8-F4E6-DF13-ED503F9DEE39</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_EMAIL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

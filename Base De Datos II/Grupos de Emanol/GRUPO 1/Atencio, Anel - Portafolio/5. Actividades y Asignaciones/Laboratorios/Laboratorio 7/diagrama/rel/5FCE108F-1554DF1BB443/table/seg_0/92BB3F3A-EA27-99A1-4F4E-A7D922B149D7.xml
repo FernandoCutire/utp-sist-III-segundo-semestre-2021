@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92BB3F3A-EA27-99A1-4F4E-A7D922B149D7" schemaObject="D54B3AC6-6D78-D8EA-2650-DB25CE690BA7" name="TELEFONO_CLIENTE">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>TELEFONO_CLIENTE</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>A789B98D-4D69-B66F-01DB-3BF1504C564B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TELEFONO" id="354D7D55-5DBC-3249-3E77-D807BD930813">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>30042CE3-FF3D-60B8-A7D0-54DC95145048</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2334B61-7449-7A36-D803-C97573338434" referredColumn="1FD45E0E-EB97-95DE-5EDC-66CA0A56B984"/>
+</associations>
+</Column>
+<Column name="ID_CLIENTE" id="76E4A1D8-0486-1291-9761-F205BFE68144">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>622CF92E-3713-8559-2A02-BE5FC9326874</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DAA49978-F600-A350-4ED6-A960CF8055BB" referredColumn="3D053F0B-94D2-AF4D-0FB4-2A52E276EB1C"/>
+</associations>
+</Column>
+<Column name="TELEFONO" id="08DA5EC6-7777-3F05-2DFC-701D55F24104">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>EE43A1C3-FE4F-DB97-B0FB-F01788FC85AB</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6331BD80-F1EA-7EF4-F817-724AEF519F9C" name="ID_TELEF_CL_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_TELEF_CL_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>EB59DD5B-0D33-9B29-FD81-DE38D3971325</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="354D7D55-5DBC-3249-3E77-D807BD930813"/>
+<colUsage columnID="76E4A1D8-0486-1291-9761-F205BFE68144"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0952B5F9-A976-A2B4-1BFA-E296F280BAC8" schemaObject="D54B3AC6-6D78-D8EA-2650-DB25CE690BA7" name="ID_TELEF_CL_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_TELEF_CL_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>E2A6641A-7A9A-4D09-432F-E7A5D85C13CF</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="354D7D55-5DBC-3249-3E77-D807BD930813"/>
+<colUsage columnID="76E4A1D8-0486-1291-9761-F205BFE68144"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6FA780D-4CEE-9A80-2867-F0694D727B4C" name="ID_CL_TEL_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76E4A1D8-0486-1291-9761-F205BFE68144"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E133151-4EE5-B6E5-FE32-E90C6FB4C500" name="ID_TEL_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="354D7D55-5DBC-3249-3E77-D807BD930813"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

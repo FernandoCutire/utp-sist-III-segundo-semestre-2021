@@ -1,0 +1,93 @@
+ CREATE SEQUENCE SEQCodZona
+START WITH 1
+INCREMENT BY 1;
+create table Zona
+(
+	Cod_Zona number not null,
+	Nombre_Zona varchar(60) not null,
+	Ingresos_Medios number not null,
+	Poblacion number not null,
+	constraint Zona_Cod_Zona_pk primary key (Cod_Zona)
+);
+CREATE SEQUENCE SEQVale
+START WITH 1
+INCREMENT BY 1;
+Create table Vale_digital
+(
+	Cod_ayuda number not null,
+	Monto number not null,
+	Fecha date not null,
+	constraint Vale_digital_Cod_ayuda_pk primary key (Cod_ayuda)
+);
+CREATE SEQUENCE SEQCodemp
+START WITH 1
+INCREMENT BY 1;
+Create table Empresa 
+(
+	Cod_empresa number not null,
+	Nombre varchar(60) not null,
+	Estado_actual varchar(10) not null,
+	Total_Empleados number not null,
+	Ubicacion varchar(160) not null,
+	constraint Empresa_Cod_empresa_pk primary key (Cod_empresa)
+);
+CREATE SEQUENCE SEQIDPer
+START WITH 1
+INCREMENT BY 1;
+Create Table Personas
+(
+	IDper number not null,
+	Cedula varchar(10) not null,
+	Nombre varchar(60) not null,
+	Apellido varchar(60) not null,
+	Fecha_cumple date not null,
+	Edad number not null,
+	estado_de_contrto varchar(10) not null,
+	Cod_Zona number not null,
+	Cod_empresa number not null,
+	constraint Personas_IDPER_pk primary key (IDper),
+	constraint Personas_Cod_Zona_fk foreign key (Cod_Zona) references Zona(Cod_Zona),
+	constraint Personas_Cod_empresa_fk foreign key (Cod_empresa) references Empresa(Cod_empresa)
+);
+
+Create Table Personas_Ayuda
+(
+	IDper number not null,
+	Cod_ayuda number not null,
+	Nombre varchar(60) not null,
+	Apellido varchar(60) not null,
+	Fecha date null,
+	constraint  Personas_Ayuda_pk primary key (IDper,Cod_ayuda),
+	constraint IDper_fk foreign key (IDper) references Personas(IDper),
+	constraint P_ayuCod_ayuda_Vale_digital_fk foreign key (Cod_ayuda) references Vale_digital(Cod_ayuda)
+);
+CREATE SEQUENCE SEQHist
+START WITH 1
+INCREMENT BY 1;
+Create Table Historial_personas
+(
+	ID_Histo number not null,
+	IDper number not null,
+	Cedula varchar(10) not null,
+	Nombre varchar(60) not null,
+	Apellido varchar(60) not null,
+	estado_de_contrto varchar(10) not null,
+	Cod_Zona number not null,
+	Cod_empresa number not null,
+	TipoAct varchar(2) not null,
+	Monto_recib number DEFAULT 0,
+	Usuario varchar(20) not null, 
+	constraint HistoPer_pk primary key (ID_Histo),
+	constraint HistoPer_IDper_fk foreign key (IDper) references Personas(IDper),
+	constraint HistoPer_Cod_Zona_fk foreign key (Cod_Zona) references Zona(Cod_Zona),
+	constraint HistoPer_Cod_empresa_fk foreign key (Cod_empresa) references Empresa(Cod_empresa)
+);
+
+Create Table Zona_ayuda 
+(
+	Cod_Zona number not null,
+	Monto number,
+	constraint  Zona_ayuda_pk primary key (Cod_Zona),
+	constraint TZona_ayuda_Czone_fk foreign key (Cod_Zona) references Zona(Cod_Zona)
+);
+	

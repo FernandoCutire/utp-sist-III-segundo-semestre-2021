@@ -1,0 +1,114 @@
+BEGIN
+p_Centro_distr ('AT01','Atlapa', 'R.Metropolitana', 'Panama', 'Avenida 5B Sur');
+p_Centro_distr ('SM02','Gym Orlando W','R.Metropolitana','Panama','San Miguelito');
+p_Centro_distr ('AG03','CEO Aguadulce','R.central','Cocle','Aguadulce');
+p_Centro_distr ('IMA05', 'IMA', 'R.Occicental', 'Chiriqui', 'David');
+END;
+/
+
+BEGIN
+
+p_Instalaciones (‘P002’, 'Irma de Lourdes T.', ‘R.Metropolitana’ ,'24 de dic');
+
+p_Instalaciones (‘P001’, 'Dr. Arnulfo Arias M.', ‘R.Metropolitana’ ,'Tansístmica');
+
+p_Instalaciones (‘C003’, 'Manuel Amador G.', ‘R.Metropolitana’,'Avenida Meléndez');
+
+p_Instalaciones (‘C005’, 'Aquilino Tejeira',’R.Central’, 'Penonomé');
+
+p_Instalaciones (‘C004’, 'Chiriquí', ‘R.Occidental’,'Calle Central');
+
+p_Instalaciones(‘H008’, 'General Cecilio A.C.', 'Chitré', 'Herrera');
+
+p_Instalaciones (‘D010’, 'Regional Metetí',’R.Oriental’, 'Metetí’);
+
+p_Instalaciones   (‘V011’, 'Luis Chico Fábrega', ‘R.Central’,'Santiago');
+
+END;
+
+/
+
+
+BEGIN
+
+P_cantidad_distribuida;
+
+END;
+
+/
+Create or replace procedure P_cantidad_distribuida
+
+AS
+
+p_cod_insumo insumo.cod_insumo%TYPE;
+
+p_id_insumo Insumo_personal_IM.cod_insumo%TYPE;
+
+p_cantidad insumo.cantidad_total%TYPE;
+
+p_cantidad_llevada  Insumo_personal_IM.cantidad_llevada%TYPE;
+
+p_descripcion insumo.descripcion%TYPE;
+
+CURSOR recorre_insumo is
+
+Select cod_insumo, cantidad_total, descripcion from insumo;
+
+BEGIN
+
+OPEN recorre_insumo;
+
+LOOP
+
+FETCH recorre_insumo INTO p_cod_insumo, p_cantidad, p_descripcion;
+
+Select cantidad_total into p_cantidad from insumo where cod_insumo=p_cod_insumo;
+
+--Select cantidad_llevada into p_cantidad_llevada from Insumo_personal_IM where cod_insumo=p_id_insumo;
+
+IF (p_cantidad_llevada>p_cantidad) THEN
+
+DBMS_OUTPUT.PUT_LINE('Insumo agotado');
+
+ELSIF (p_cantidad_llevada<=p_cantidad) THEN
+
+UPDATE INSUMO
+
+Set
+
+Cantidad_total= f_cal_cantidad(p_cantidad,p_cantidad_llevada)
+
+Where p_cod_insumo=p_id_insumo;
+
+ELSE
+
+DBMS_OUTPUT.PUT_LINE('Insumo no encontrado');
+
+END IF;
+
+EXIT WHEN recorre_insumo%NOTFOUND;
+
+END LOOP;
+
+CLOSE  recorre_insumo;
+
+END P_cantidad_distribuida;
+
+/
+
+CREATE OR REPLACE TRIGGER   Act_Transporte
+
+ AFTER INSERT ON Registro_transporte
+
+for each row
+
+ BEGIN
+
+ INSERT INTO Transporte (matricula, cap_carga, cod_trans)
+
+ VALUES (:new.matricula, :new.cap_carga, :new.cod_trans);
+
+ END Act_transporte;
+
+/
+ DELETE FROM TRANSPORTE WHERE MATRICULA = 'AF123' AND cod_trans = 'PCP'

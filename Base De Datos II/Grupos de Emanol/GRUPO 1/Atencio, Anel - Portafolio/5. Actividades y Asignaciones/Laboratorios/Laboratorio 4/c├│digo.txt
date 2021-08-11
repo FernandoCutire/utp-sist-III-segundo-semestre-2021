@@ -1,0 +1,27 @@
+create table Estudiantes (
+    num_est number(5) not null,
+    ced_est varchar2(12) not null,
+    nombre_est varchar(50) not null,
+    calif_final number(3) not null,
+    constraint pk_estudiantes_num_est primary key (num_est)
+);
+
+DECLARE -- Declaración de las variables para la tabla
+    v_num_est  number := 000001;
+    v_ced_est varchar2(12) := '8-950-100';
+    v_nombre_est varchar(50) := 'Marcos Gonzalez';
+    v_calif_final number := 71;
+    v_salida_nombre_est varchar(50);
+    v_salida_calif_final number(3);
+    
+BEGIN --Ahora se insertan las variables a la tabla
+    insert into Estudiantes (num_est, ced_est, nombre_est, calif_final) values (v_num_est, v_ced_est, v_nombre_est, v_calif_final);
+    -- Ahora hago la consulta a la tabla
+    select nombre_est, calif_final into v_salida_nombre_est, v_salida_calif_final
+    from Estudiantes;
+    dbms_output.put_line(v_salida_nombre_est);
+    dbms_output.put_line(v_salida_calif_final);
+END;
+/
+
+select nombre_est, calif_final from estudiantes;

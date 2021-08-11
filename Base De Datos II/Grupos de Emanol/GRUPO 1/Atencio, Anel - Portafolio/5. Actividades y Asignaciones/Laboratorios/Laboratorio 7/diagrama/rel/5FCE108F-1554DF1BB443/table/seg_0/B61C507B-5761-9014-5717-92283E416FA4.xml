@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B61C507B-5761-9014-5717-92283E416FA4" schemaObject="D54B3AC6-6D78-D8EA-2650-DB25CE690BA7" name="TIPO_AHORRO">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>TIPO_AHORRO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>24641CD4-272E-2147-7AAA-050379E354CC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_AHORRO" id="41A9AD90-A273-BF10-D4D3-E2A2C33307EA">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TIPO_AHORRO</sourceObjSchema>
+<sourceObjName>ID_AHORRO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>B4BCDC15-B975-DDD9-8704-8E9725B1FAED</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AHORRO" id="FF8D9AD2-1C17-FAF1-C141-FBB381A62191">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TIPO_AHORRO</sourceObjSchema>
+<sourceObjName>AHORRO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>56EA2F3F-0F77-B7E6-476E-A587EAB37D39</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTERES_AHORRO" id="7645A774-FCA3-B322-D8BF-85269652A2BB">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>TIPO_AHORRO</sourceObjSchema>
+<sourceObjName>INTERES_AHORRO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>59482642-EAF1-4CE1-004D-3B428FBD1B5F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="408A7136-734D-BE27-F8FD-0575C91668E3" name="ID_AHORRO_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_AHORRO_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>6EEBE11B-0186-E580-F628-03F4007F980A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41A9AD90-A273-BF10-D4D3-E2A2C33307EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D140A3B-B880-8609-C28C-7DEAD3FF1C59" schemaObject="D54B3AC6-6D78-D8EA-2650-DB25CE690BA7" name="ID_AHORRO_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_AHORRO_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>2C0FF0D8-B03F-674B-E538-4CD640865B77</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41A9AD90-A273-BF10-D4D3-E2A2C33307EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

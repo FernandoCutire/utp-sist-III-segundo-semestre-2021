@@ -1,0 +1,204 @@
+Create Table Inspector (
+ID_Inspector       Varchar (6) Primary Key not null,
+Nombre_Inspector   Varchar (20) ,
+Cant_Inspec        Number,
+Estado             Varchar (12)
+);
+
+Table created.
+
+Create Table Fase (
+ID_Fase    Varchar (6) Primary Key Not Null,
+Fecha_Inicio       Date
+);
+
+Create table Sector (
+ID_Sector          Varchar (5) Primary Key Not Null,
+Nombre_Sector      Varchar (50),
+ID_Fase            Varchar (6),
+Cant_empresa       Number,
+Foreign Key (ID_Fase) References Fase (ID_Fase)
+);
+
+Create Table Empresa (
+ID_Empresa         Varchar (6),
+Nombre             Varchar (50),
+N_Empleados        Number,
+ID_Sector          Varchar (5),
+Foreign Key (ID_Sector) References Sector (ID_Sector)
+);
+
+Create Table Sede (
+ID_Sede            Varchar (5) Primary Key Not Null,
+Capacidad          Number,
+Direc              Varchar (40),
+Horario            Varchar (25),
+Cant_Empleado      Number,
+ID_Empresa         Varchar (6),
+Foreign Key (ID_Empresa) References Empresa (ID_Empresa)
+);
+
+Create Table Empleado (
+ID_Empleado        Varchar (10) Primary Key Not Null,
+ID_Sede            Varchar (5),
+Nombre             Varchar (20),
+Cargo              Varchar (20),
+Telefono           Varchar (8),
+Direc              Varchar (20),
+Foreign Key (ID_Sede) References Sede (ID_Sede)
+);
+
+Create Table Visita (
+ID_Inspector       Varchar (6) Primary Key Not Null,
+ID_Sede            Varchar (5),
+Fecha_Inspec       Date,
+Foreign Key (ID_Inspector) References Inspector (ID_Inspector),
+Foreign Key (ID_sede) References Sede (ID_Sede)
+);
+
+Create Or Replace Procedure AddInspector (
+P_IDInspecT    IN    Inspector.ID_Inspector%Type,
+P_NombInspe   IN     Inspector.Nombre_Inspector%Type,
+P_CantInspe   IN     Inspector.Cant_Inspec%Type,
+P_Estado     IN      Inspector.Estado%Type,
+P_Error    OUT     Varchar2
+) AS
+
+Begin
+
+     Insert Into Inspector
+             Values (P_IDInspecT, P_NombInspe, P_CantInspe, P_Estado);
+
+Exception
+ When Others Then
+     P_Error := 'Datos Faltantes';
+
+Commit;
+End AddInspector;
+/
+
+Create OR Replace Procedure AddFase (
+P_IDFase   IN      Fase.ID_Fase%Type,
+P_FechaIni         IN      Fase.Fecha_Inicio%Type,
+P_Error    OUT     Varchar
+) AS
+
+Begin
+
+     Insert INto Fase
+            Values (P_IDFase, P_FechaIni);
+
+Exception
+   When Others Then
+           P_Error := 'Datos Faltantes';
+
+Commit;
+End AddFase;
+/
+
+Create Or Replace Procedure AddSector (
+P_IDSector         IN      Sector.ID_Sector%Type,
+P_NombSect         IN      Sector.Nombre_Sector%Type,
+P_IDFase           IN      Sector.ID_Fase%Type,
+P_CantEmrp         IN      Sector.Cant_Empresa%Type,
+P_Error            OUT     Varchar2
+) AS
+
+Begin
+
+    Insert Into Sector
+           Values (P_IDSector, P_NombSect, P_IDFase, P_CantEmrp);
+
+Exception
+    When Others Then
+           P_Error := 'Datos Faltantes';
+
+Commit;
+End AddSector;
+/
+
+Create Or Replace Procedure AddEmpresa (
+P_IDEmpresa        IN      Empresa.ID_Empresa%Type,
+P_Nombre           IN      Empresa.Nombre%Type,
+P_NEmpleado        IN      Empresa.N_Empleados%Type,
+P_IDSector         IN      Empresa.ID_Sector%Type,
+P_Error      OUT       Varchar2
+) AS
+
+Begin
+
+    Insert Into Empresa
+            Values (P_IDEmpresa, P_Nombre, P_NEmpleado, P_IDSector);
+ 
+ Exception
+     When Others Then
+             P_Error := 'Datos Faltantes';
+ 
+ Commit;
+ End AddEmpresa;
+ /
+
+Create or Replace Procedure AddSede (
+P_IDSede           IN      Sede.ID_Sede%Type,
+P_Capacidad        IN      Sede.Capacidad%Type,
+P_Direccion        IN      Sede.Direc%Type,
+P_Horario          IN      Sede.Horario%Type,
+P_CantEmple        IN      Sede.Cant_Empleado%Type,
+P_IDEmpresa        IN      Sede.ID_Empresa%Type,
+P_Error            OUT     Varchar2
+) AS
+
+Begin
+
+  Insert Into Sede
+       Values (P_IDSede, P_Capacidad, P_Direccion, P_Horario, P_CantEmple, P_IDEmpresa);
+
+Exception
+When Others Then
+          P_Error := 'Datos Faltantes';
+Commit;
+End AddSede;
+/
+
+Create Or Replace Procedure AddEmpleado (
+P_IDEmpleado       IN      Empleado.ID_Empleado%Type,
+P_IDSede           IN      Empleado.ID_Sede%Type,
+P_Nombre           IN      Empleado.Nombre%Type,
+P_Cargo            IN      Empleado.Cargo%Type,
+P_Telefono         IN      Empleado.Telefono%Type,
+P_Direc            IN      Empleado.Direc%Type,
+P_Error            OUT     Varchar2
+) as
+
+Begin
+   Insert INto Empleado
+           Values (P_IDEmpleado, P_IDSede, P_Nombre, P_Cargo, P_Telefono, P_Direc);
+
+Exception
+   When Others Then
+           P_Error := 'Datos Faltantes';
+
+Commit;
+End AddEmpleado;
+/
+
+Create or Replace Procedure AddVisita (
+P_IDInspect        IN      Visita.ID_Inspector%Type,
+P_IDSede           IN      Visita.ID_Sede%Type,
+P_FechaInsp        IN      Visita.Fecha_Inspec%Type,
+P_Error            OUT      Varchar2
+)As
+
+Begin
+
+  Insert Into Visita
+           Values (P_IDInspect, P_IDSede, P_FechaInsp);
+
+Exception
+   When Others Then
+           P_Error := 'Datos Faltantes';
+
+Commit;
+End AddVisita;
+/
+

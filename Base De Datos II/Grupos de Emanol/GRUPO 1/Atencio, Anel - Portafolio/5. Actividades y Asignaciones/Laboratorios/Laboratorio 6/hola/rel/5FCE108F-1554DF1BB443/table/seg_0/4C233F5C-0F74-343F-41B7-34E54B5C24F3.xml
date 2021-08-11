@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C233F5C-0F74-343F-41B7-34E54B5C24F3" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="EMAIL">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:48 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_EMAIL" id="868619B5-D1E4-3F37-B4A4-13F7FD962763">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMAIL</sourceObjSchema>
+<sourceObjName>ID_EMAIL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_EMAIL" id="E7C54BBF-E3A7-674F-CE4F-D6CA2930318B">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>EMAIL</sourceObjSchema>
+<sourceObjName>TIPO_EMAIL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF5DBE9F-28A1-E941-A24A-4AC59AEB9E2E" name="ID_EMAIL_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>ID_EMAIL_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="868619B5-D1E4-3F37-B4A4-13F7FD962763"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25F14902-9B5D-6ECA-27EE-2396E1CDB030" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="ID_EMAIL_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>ID_EMAIL_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="868619B5-D1E4-3F37-B4A4-13F7FD962763"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

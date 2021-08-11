@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CC44ED98-42EA-AC67-0692-A2220C7A0389" containerWithKeyObject="6D2DDBA9-3B8C-3671-E79D-D1DE3989CBCF" localFKIndex="4C6A0CDF-7C4C-0070-ED9B-FE75EAA49596" name="ID_TIPO_FK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_TIPO_FK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<referredTableLongName>LAB7_P.TIPO_PRESTAMO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>45788BCC-8CDF-6269-DA7B-2AA01DC36831</referredTableID>
+<keyObject>1C745708-378B-AF63-79B7-1C8BFC88CE20</keyObject>
+<referredKeyID>1C745708-378B-AF63-79B7-1C8BFC88CE20</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

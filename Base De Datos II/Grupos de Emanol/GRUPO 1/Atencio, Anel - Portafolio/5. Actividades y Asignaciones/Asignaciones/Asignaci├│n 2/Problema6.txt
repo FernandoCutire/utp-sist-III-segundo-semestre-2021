@@ -1,0 +1,51 @@
+create table Juegos_Wii (
+    id_juego        number not null,
+    nombre_juego    varchar2(100) not null,
+    cantidad_juego  number not null,
+    precio_juego    number not null,
+    constraint id_juego_pk primary key (id_juego)
+);
+
+insert into Juegos_wii values (1, 'Super Mario Galaxy', 12, 40);
+insert into Juegos_wii values (2, 'New Super Mario Bros Wii', 7, 60);
+insert into Juegos_wii values (3, 'Super Smash Bros Brawl', 3, 30);
+insert into Juegos_wii values (4, 'Metroid Prime Trilogy', 1, 60);
+insert into Juegos_wii values (5, 'Mario Kart Wii', 10, 50);
+insert into Juegos_wii values (6, 'Dragon Ball Z BT3', 4, 20);
+insert into Juegos_wii values (7, 'Naruto Shippuden CNR3', 2, 20);
+insert into Juegos_wii values (8, 'Golden Eye 007', 6, 40);
+insert into Juegos_wii values (9, 'The Legend of Zelda Skyward Sord', 1, 60);
+insert into Juegos_wii values (10, 'The Legend of Zelda Twilight Princess', 8, 30);
+insert into Juegos_wii values (11, 'Super Mario Paper', 10, 20);
+insert into Juegos_wii values (12, 'Space Chimps', 15, 20);
+insert into Juegos_wii values (13, 'Mad World', 20, 20);
+insert into Juegos_wii values (14, 'Mario Party 9', 10, 30);
+insert into Juegos_wii values (15, 'Wii Sports', 20, 20);
+
+set serveroutput on;
+DECLARE
+    v_nombre_juego  juegos_wii.nombre_juego%TYPE;
+    v_precio_juego  juegos_wii.precio_juego%TYPE;
+    
+    v_descuento number := 10;
+    
+    CURSOR c_descuento IS
+        SELECT nombre_juego, precio_juego
+        FROM juegos_wii 
+        WHERE cantidad_juego >= v_descuento;
+    
+BEGIN
+    OPEN c_descuento;
+    UPDATE Juegos_wii
+            set precio_juego = precio_juego - (precio_juego*0.5)
+            where cantidad_juego >= 10;
+    dbms_output.put_line('Juegos con descuento');
+    LOOP
+        FETCH c_descuento INTO v_nombre_juego, v_precio_juego;
+        EXIT WHEN c_descuento%NOTFOUND;
+        
+        dbms_output.put_line(v_nombre_juego);
+    END LOOP;
+    CLOSE c_descuento;
+    COMMIT;
+END;

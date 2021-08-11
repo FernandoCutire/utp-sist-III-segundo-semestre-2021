@@ -1,0 +1,14 @@
+DROP TABLE Zona_ayuda;
+DROP TABLE Historial_personas;
+DROP SEQUENCE SEQHist;
+DROP TABLE Personas_Ayuda;
+DROP TABLE Personas;
+DROP SEQUENCE SEQIDPer;
+DROP TABLE Empresa;
+DROP SEQUENCE SEQCodemp;
+DROP TABLE Vale_digital;
+DROP SEQUENCE SEQVale;
+DROP TABLE Zona;
+DROP SEQUENCE SEQCodZona;
+
+

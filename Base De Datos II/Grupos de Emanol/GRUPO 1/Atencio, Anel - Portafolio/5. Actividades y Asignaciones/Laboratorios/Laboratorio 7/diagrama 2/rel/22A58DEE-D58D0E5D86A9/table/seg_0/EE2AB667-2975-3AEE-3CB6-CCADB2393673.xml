@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE2AB667-2975-3AEE-3CB6-CCADB2393673" schemaObject="292C14E3-9BDF-4416-FE92-9FAB27818897" name="SUCURSAL_PRESTAMO">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>SUCURSAL_PRESTAMO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:06 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COD_SUCURSAL" id="2E9E9C95-21BD-8A54-CF53-693A879351C2">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>SUCURSAL_PRESTAMO</sourceObjSchema>
+<sourceObjName>COD_SUCURSAL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="192599F7-281C-852C-49E4-E20295732626" referredColumn="AC0DD311-26B2-93B5-B55E-DBC354BA87FA"/>
+</associations>
+</Column>
+<Column name="ID_TIPO" id="DEBF4726-42FC-53FC-C4A0-F88A3DBD5B78">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>SUCURSAL_PRESTAMO</sourceObjSchema>
+<sourceObjName>ID_TIPO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43A0CEA2-774A-ACA1-2024-1A88D5F6900B" referredColumn="D0E36771-4922-52BB-F3DB-6E404FD40B1B"/>
+</associations>
+</Column>
+<Column name="MONTO_PRESTAMO" id="7C9E6094-AC2D-28A8-9ECA-1D85880F0431">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>SUCURSAL_PRESTAMO</sourceObjSchema>
+<sourceObjName>MONTO_PRESTAMO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="46B846F3-0D0D-2638-4B1A-97BBCDC79016" name="COD_ID_SUC_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>COD_ID_SUC_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E9E9C95-21BD-8A54-CF53-693A879351C2"/>
+<colUsage columnID="DEBF4726-42FC-53FC-C4A0-F88A3DBD5B78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25BCCB51-EED4-8034-63BC-E43E9AC3C820" schemaObject="292C14E3-9BDF-4416-FE92-9FAB27818897" name="COD_ID_SUC_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>COD_ID_SUC_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E9E9C95-21BD-8A54-CF53-693A879351C2"/>
+<colUsage columnID="DEBF4726-42FC-53FC-C4A0-F88A3DBD5B78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D89195D-D17D-BB69-10AA-33DC0CEB41AA" name="COD_SUCURSAL_P_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E9E9C95-21BD-8A54-CF53-693A879351C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FCA2223E-5147-0687-2A07-F1D85CC6F579" name="ID_TIPO_SUC_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEBF4726-42FC-53FC-C4A0-F88A3DBD5B78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

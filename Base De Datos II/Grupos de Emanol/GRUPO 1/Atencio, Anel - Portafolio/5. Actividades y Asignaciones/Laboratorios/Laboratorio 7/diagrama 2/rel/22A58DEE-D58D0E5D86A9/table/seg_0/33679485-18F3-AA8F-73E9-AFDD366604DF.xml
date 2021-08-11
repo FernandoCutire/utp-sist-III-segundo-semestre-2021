@@ -1,0 +1,215 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33679485-18F3-AA8F-73E9-AFDD366604DF" schemaObject="292C14E3-9BDF-4416-FE92-9FAB27818897" name="AUDITORIA">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>AUDITORIA</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:06 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TRANSACCION" id="67239573-5909-9EA3-6799-4F7E385E2A63">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>ID_TRANSACCION</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TABLA" id="8F894C4D-CA8D-B843-C27B-6B8859DDFC87">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>TABLA</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CLIENTE" id="11B2E183-D078-7E4A-6326-251C91D1716A">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>ID_CLIENTE</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="880A4A9C-8E79-4BB7-ACBD-711F317FDDC4" referredColumn="5CB7E093-F472-0CD2-7436-7DCF8DAD855E"/>
+</associations>
+</Column>
+<Column name="ID_AHORRO" id="E29620AF-7266-80C0-0605-A5F78646260F">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>ID_AHORRO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6806BC8B-699E-2E87-BA04-86D0CD921B86" referredColumn="EDE64A31-0A8A-75C2-BF70-069CCD11DCBD"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_TRANSC" id="12BB138F-2584-7A48-7AFB-658E0D0077B6">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>ID_TIPO_TRANSC</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="92974B97-6F46-A2A3-2098-7BAD274E8BCC" referredColumn="019CA7EB-4315-59EC-FA7A-7807639AE727"/>
+</associations>
+</Column>
+<Column name="SALDO_ANTERIOR" id="BCFA6EE0-23E6-5648-7219-270949870925">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>SALDO_ANTERIOR</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTO_DR" id="72798CC3-A1AE-8A3E-ADDD-2C3CDEAC7954">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>MONTO_DR</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALDO_FINAL" id="EB24E241-704E-A9D5-D6D3-1F38BFDC8451">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>SALDO_FINAL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO" id="D95D364C-31A6-3135-D011-892B53614FC9">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>USUARIO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="3C55B121-79AE-35B8-522E-BFAD8F5D889D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>AUDITORIA</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE327020-A235-FD32-8430-5DC25C4205D5" name="AUD_ID_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>AUD_ID_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67239573-5909-9EA3-6799-4F7E385E2A63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80767AB8-14A9-9516-D0CD-4066776271BE" schemaObject="292C14E3-9BDF-4416-FE92-9FAB27818897" name="AUD_ID_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>AUD_ID_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67239573-5909-9EA3-6799-4F7E385E2A63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84037AFD-241D-C2D9-07AE-3FD9EB41C2A1" name="AUD_ID_AHORRO_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E29620AF-7266-80C0-0605-A5F78646260F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E466320-6DAB-1B1C-E139-6DB75BAEA406" name="AUD_ID_CL_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11B2E183-D078-7E4A-6326-251C91D1716A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35F06F13-5345-ADE3-34CD-73EB448935AD" name="AUD_ID_TRANSC_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12BB138F-2584-7A48-7AFB-658E0D0077B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

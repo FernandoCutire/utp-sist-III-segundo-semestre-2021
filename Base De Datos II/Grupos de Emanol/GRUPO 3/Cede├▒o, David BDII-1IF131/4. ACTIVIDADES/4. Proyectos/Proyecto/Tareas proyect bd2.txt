@@ -1,0 +1,11 @@
+Tareas a desarrollar 
+1- Tablas -----------------Listo
+2- Proceso para insertar en las tablas-----------Listo
+3- Proceso para suministar los vales en este se crean los vales -----Listo
+4- Proceso para actualizar los estados de contrato -------------Listo
+6- Trigger para actualizar en zona ayuda ------------------Listo
+9- Creacion de vistas ----------------------Liso pero revisar
+10- Trigger de historial-------------------Listo
+11- pruebas 
+12- preparar el drop 
+13- Revisar funcion y ultimo trigger 

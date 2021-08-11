@@ -1,0 +1,47 @@
+create table peliculas (
+    id_pelicula        number not null,
+    nombre_pelicula    varchar2(100) not null,
+    cantidad_pelicula  number not null,
+    precio_pelicula    number not null,
+    constraint id_pelicula_pk primary key (id_pelicula)
+);
+
+insert into peliculas values (1, 'atrapame si puedes', 1, 40);
+insert into peliculas values (2, 'los huegos del hambre', 3, 60);
+insert into peliculas values (3, 'star wars', 9, 90);
+insert into peliculas values (4, 'harry potter', 8, 60);
+insert into peliculas values (5, 'rapidos y furiosos', 10, 50);
+insert into peliculas values (6, 'Dragon Ball Z', 1, 20);
+insert into peliculas values (7, 'Narnia', 6, 20);
+insert into peliculas values (8, 'hush hush', 6, 60);
+insert into peliculas values (9, 'los caza fantasmas', 1, 60);
+insert into peliculas values (10, 'crepusculo', 4, 30);
+
+set serveroutput on;
+DECLARE
+    v_nombre_pelicula  pelicula.nombre_pelicula%TYPE;
+    v_precio_pelicula  pelicula.precio_pelicula%TYPE;
+    
+    v_descuento number := 5;
+    
+    CURSOR c_descuento IS
+        SELECT nombre_pelicula, precio_pelicula
+        FROM peliculas
+        WHERE cantidad_pelicula >= v_descuento;
+    
+BEGIN
+    OPEN c_descuento;
+    UPDATE  peliculas
+            set precio_pelicula = precio_pelicula - (precio_pelicula*0.5)
+            where cantidad_pelicula >= 5;
+    dbms_output.put_line('peliculas con descuento');
+    LOOP
+        FETCH c_descuento INTO v_nombre_pelicula, v_precio_pelicula;
+        EXIT WHEN c_descuento%NOTFOUND;
+        
+        dbms_output.put_line(v_nombre_pelicula);
+    END LOOP;
+    CLOSE c_descuento;
+    COMMIT;
+END;
+/

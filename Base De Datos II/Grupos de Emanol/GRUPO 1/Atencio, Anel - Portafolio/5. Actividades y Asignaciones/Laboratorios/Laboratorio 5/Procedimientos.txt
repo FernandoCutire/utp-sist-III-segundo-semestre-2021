@@ -1,0 +1,72 @@
+CREATE SEQUENCE email_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+CREATE OR REPLACE PROCEDURE add_email (
+    p_id_email      IN email.id_email%TYPE,
+    p_tipo_email    IN email.tipo_email%TYPE
+    ) AS
+BEGIN
+    INSERT INTO email (id_email, tipo_email)
+    VALUES (email_sequence.nextval, p_tipo_email);
+COMMIT;
+END add_email;
+
+---------------------------------------------------
+
+CREATE SEQUENCE telefono_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+CREATE OR REPLACE PROCEDURE add_telefono (
+    p_id_telefono      IN telefono.id_telefono%TYPE,
+    p_tipo_telefono    IN telefono.tipo_telefono%TYPE
+    ) AS
+BEGIN
+    INSERT INTO telefono (id_telefono, tipo_telefono)
+    VALUES (telefono_sequence.nextval, p_tipo_telefono);
+COMMIT;
+END add_telefono;
+
+-----------------------------------------------------
+
+CREATE SEQUENCE profesion_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+CREATE OR REPLACE PROCEDURE add_profesion (
+    p_id_pro      IN profesion.id_pro%TYPE,
+    p_profesion    IN profesion.profesion%TYPE
+    ) AS
+BEGIN
+    INSERT INTO profesion (id_pro, profesion)
+    VALUES (profesion_sequence.nextval, p_profesion);
+COMMIT;
+END add_profesion;
+
+-----------------------------------------------------
+
+CREATE SEQUENCE tipo_prestamo_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+CREATE OR REPLACE PROCEDURE add_tipo_prestamo (
+    p_id_tipo           IN tipo_prestamo.id_tipo%TYPE,
+    p_tipo              IN tipo_prestamo.tipo%TYPE,
+    p_tasa_interes      IN tipo_prestamo.tasa_interes%TYPE
+    ) AS
+BEGIN
+    INSERT INTO tipo_prestamo (id_tipo, tipo, tasa_interes)
+    VALUES (tipo_prestamo_sequence.nextval, p_tipo, p_tasa_interes);
+COMMIT;
+END add_tipo_prestamo;
+
+-----------------------------------------------------------

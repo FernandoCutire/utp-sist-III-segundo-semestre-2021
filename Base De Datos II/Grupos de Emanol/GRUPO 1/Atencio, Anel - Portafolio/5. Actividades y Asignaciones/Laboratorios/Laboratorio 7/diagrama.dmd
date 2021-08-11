@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diagrama" id="3AA8C652-807A-F9B9-A851-923F3C12827A" version="3.5">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:49:27 UTC</createdTime>
+<ownerDesignName>hola</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>3AA8C652-807A-F9B9-A851-923F3C12827A</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="BC38BEF9-08EE-3D8A-2F83-A9AFC428A697">
+<designStoragePath>C:\Users\Anel_\Documents\Universidad\VI Semestre\Sistemas de Bases de Datos II\Laboratorios\Laboratorio 6</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

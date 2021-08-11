@@ -1,0 +1,22 @@
+create table temp_table (
+    num_col number,
+    char_col varchar2(50)
+    );
+    
+declare
+v_Num1 number := 1;
+v_Num2 number := 2;
+v_string1 varchar(50) := 'Hello World';
+v_String2 varchar(50) := 'This message brought to you by PL/SQL!';
+v_outputstar varchar2(50);
+
+begin
+insert into temp_table (num_col, char_col) values (v_num1, v_string1);
+insert into temp_table (num_col, char_col) values (v_num2, v_string2);
+select char_col into v_outputstar
+from temp_table
+where num_col = v_num1;
+dbms_output.put_line(v_Outputstar);
+end;
+
+select * from temp_table;

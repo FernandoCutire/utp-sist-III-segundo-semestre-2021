@@ -1,0 +1,22 @@
+SQL> Create Or Replace Function CalcInteres (
+  2  f_TipAho   TransadePoreti.Tip_Ahorro%Type)
+  3  Return Varchar2 IS
+  4
+  5  V_Monto    Number;
+  6
+  7  Begin
+  8
+  9  Select Tip_Ahorro, MontoDep_Retiro INTO
+ 10  f_TipAho, V_Monto
+ 11  From TransadePoreti
+ 12  Where Tip_Ahorro = f_TipoAho;
+ 13
+ 14   If f_TipAho = Tip_Ahorro then
+ 15     V_Monto * 0.06;
+ 16   Else
+ 17     V_Monto * 0.04;
+ 18   End IF;
+ 19  End CalcInteres;
+ 20  /
+
+Warning: Function created with compilation errors.

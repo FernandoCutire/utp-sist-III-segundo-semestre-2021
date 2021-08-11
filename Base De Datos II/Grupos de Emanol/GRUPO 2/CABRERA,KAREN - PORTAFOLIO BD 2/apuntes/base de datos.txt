@@ -1,0 +1,53 @@
+
+Create TABLE Cumple(
+ID number not null,
+Nombre varchar(30) not null,
+Fecha_cumple date not null,
+constraint pk_cumple_ID primary key (ID)
+);
+DECLARE
+	V_ID number;
+	Nombre Cumple.Nombre%TYPE;
+	Fecha_cumple Cumple.Fecha_cumple%TYPE;
+BEGIN 
+	FOR V_ID IN 1..5 LOOP
+		IF  V_ID = 1 THEN
+			Nombre :='&Nombre';
+			Fecha_cumple :=to_date('&fecha','DD/MM/YYYY');
+			INSERT INTO Cumple VALUES(V_ID,Nombre,Fecha_cumple);
+		ELSIF V_ID = 2 THEN
+			Nombre :='&Nombre';
+			Fecha_cumple :=to_date('&fecha','DD/MM/YYYY');
+			INSERT INTO Cumple VALUES(V_ID,Nombre,Fecha_cumple);
+		ELSIF V_ID = 3 THEN
+			Nombre :='&Nombre';
+			Fecha_cumple :=to_date('&fecha','DD/MM/YYYY');
+			INSERT INTO Cumple VALUES(V_ID,Nombre,Fecha_cumple);
+		ELSIF V_ID = 4 THEN
+			Nombre :='&Nombre';
+			Fecha_cumple :=to_date('&fecha','DD/MM/YYYY');
+			INSERT INTO Cumple VALUES(V_ID,Nombre,Fecha_cumple);
+		ELSE
+			Nombre :='&Nombre';
+			Fecha_cumple :=to_date('&fecha','DD/MM/YYYY');
+			INSERT INTO Cumple VALUES(V_ID,Nombre,Fecha_cumple);
+		END IF;
+	END LOOP;
+END;
+///Bloque 2 
+DECLARE 
+	v_ID Cumple.ID%TYPE;
+	v_Nombre Cumple.Nombre%TYPE;
+	v_Fecha_cumple Cumple.Fecha_cumple%TYPE;
+BEGIN 
+	v_ID := &v_ID;
+	Select Nombre,Fecha_cumple INTO v_Nombre,v_Fecha_cumple
+	From cumple
+	Where ID=v_ID;
+	DBMS_OUTPUT.PUT_LINE('Nombre: ' || v_Nombre || ' Fecha de cumpleaños:' || v_Fecha_cumple);
+EXCEPTION
+WHEN NO_DATA_FOUND THEN
+	DBMS_OUTPUT.PUT_LINE('Estudiante no existe en la BD');
+END;
+
+

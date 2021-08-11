@@ -1,0 +1,55 @@
+create table rooms (
+    room_id     number(4) not null,
+    building    varchar2(15) not null,
+    constraint room_id_pk primary key (room_id)
+);
+
+insert into rooms values (1, 'Edificio 1');
+insert into rooms values (2, 'Edificio 2');
+insert into rooms values (3, 'Edificio 3');
+insert into rooms values (4, 'Edificio 4');
+
+create table classes (
+    class_id    number(4) not null,
+    department  varchar2(20) not null,
+    course      varchar2(20) not null,
+    room_id     number(4) not null,
+    constraint class_id_pk primary key (class_id),
+    constraint room_id_fk foreign key (room_id) references rooms (room_id)
+);
+
+insert into classes values (101, 'Matematicas', 'Calculo 1', 1);
+insert into classes values (102, 'Matematicas', 'Algebra 1', 1);
+insert into classes values (201, 'Ciencias Naturales', 'Fisica 1', 2);
+insert into classes values (202, 'Ciencias Naturales', 'Quimica', 2);
+insert into classes values (301, 'Ciencias Sociales', 'Historia', 3);
+insert into classes values (302, 'Ciencias Sociales', 'Filosofia', 3);
+insert into classes values (401, 'Bellas Artes', 'Dibujo 1', 4);
+insert into classes values (402, 'Bellas Artes', 'Dibujo 2', 4);
+
+set serveroutput on;
+DECLARE
+	v_RoomID    classes.room_id%TYPE;
+	v_Building  rooms.building%TYPE;
+	v_Department    classes.department%TYPE;
+	v_Course    classes.course%TYPE;
+
+	CURSOR c_Building IS
+		SELECT building
+		FROM rooms, classes
+		WHERE rooms.room_id = classes.room_id
+		AND department = v_Department
+		AND course = v_Course;
+
+BEGIN
+	-- Asignar las variables de Acoplamiento antes de abrir el cursor
+	v_Department := 'Matematicas';
+	v_Course := 'Calculo 1';
+	
+	OPEN c_Building;
+    FETCH c_Building INTO v_building;
+        v_Department := 'Ciencias Naturales';
+        v_Course := 'Quimica';
+        dbms_output.put_line('El Edificio es el: ' || v_building);
+    CLOSE c_Building;
+END;

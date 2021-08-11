@@ -1,0 +1,127 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1- Suministrar vale
+CREATE OR REPLACE PROCEDURE SuministrarVale(
+p_IDvale Vale_digital.Cod_ayuda%TYPE,
+p_error out varchar2)AS
+CURSOR c_Personas IS
+SELECT IDper,Nombre,Apellido,estado_de_contrto
+From Personas;
+p_IDper Personas.IDper%TYPE;
+p_Nombre Personas.Nombre%TYPE;
+p_Apellido Personas.Apellido%TYPE;
+p_EstContrac Personas.estado_de_contrto%TYPE;
+BEGIN
+OPEN c_Personas;
+FETCH c_Personas INTO p_IDper,p_Nombre,p_Apellido,p_EstContrac;
+WHILE c_Personas%FOUND LOOP
+    IF(p_EstContrac = 'Inactivo')THEN
+        INSERT INTO Personas_Ayuda (IDper,Cod_ayuda,Nombre,Apellido,Fecha)
+            Values(p_IDper,p_IDvale,p_Nombre,p_Apellido,sysdate);
+     ELSE
+	dbms_output.put_line('Contrato activo');
+     END IF;
+    FETCH c_Personas INTO p_IDper,p_Nombre,p_Apellido,p_EstContrac;
+END LOOP;
+CLOSE c_Personas;
+p_error := 'Vale suministrado';
+	EXCEPTION 
+	WHEN DUP_VAL_ON_INDEX THEN 
+	p_error := 'Ya fue suministrado';
+	WHEN OTHERS THEN 
+	p_error := 'No se suministro';
+COMMIT;
+END SuministrarVale;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2- Proceso para actualizar los estados de contrato 
+CREATE OR REPLACE PROCEDURE ActuaEstCont(
+p_IDper Personas.IDper%TYPE,
+p_EstContrac Personas.estado_de_contrto%TYPE,
+p_error out varchar2)AS
+BEGIN
+UPDATE Personas
+SET
+estado_de_contrto = p_EstContrac
+WHERE p_IDper=IDper;
+p_error := 'Esatado Actualizado';
+	EXCEPTION 
+	WHEN NO_DATA_FOUND THEN 
+	p_error := 'No se encontraron datos';
+	WHEN OTHERS THEN 
+	p_error := 'No se actualizo la tabla ahorros';
+COMMIT;
+END ActuaEstCont;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+TRIGGERS 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+4- Trigger para crear las zonas  y actualizar Zona ayuda
+CREATE OR REPLACE TRIGGER T_ActZonaAyu
+AFTER INSERT ON PERSONAS_AYUDA
+FOR EACH ROW 
+DECLARE
+T_monto vale_digital.monto%TYpe ;
+T_Zona Personas.Cod_zona%TYPE;
+BEGIN 
+Select Monto INTO T_monto from Vale_Digital WHERE Cod_Ayuda=:NEW.Cod_Ayuda;
+Select Cod_Zona INTO T_Zona from Personas WHERE IDper = :NEW.IDper;
+UPDATE Zona_Ayuda
+Set
+Monto = Monto+T_monto
+WHERE Cod_Zona =T_Zona;
+IF SQL%ROWCOUNT=0 THEN 
+INSERT INTO Zona_Ayuda
+	Values(T_Zona,T_monto);
+END IF;
+END  T_ActZonaAyu;
+
+5- Trigger para historial
+///Revisra funcion
+CREATE OR REPLACE FUNCTION CalcularMonto(
+f_IDper personas.idper%TYPE)RETURN NUMBER IS
+v_monto vale_digital.monto%TYPE;
+v_codayu personas_ayuda.cod_ayuda%TYPE;
+v_montoT vale_digital.monto%TYPE:=0;
+Cursor c_MontAyud is
+    Select cod_ayuda
+        FROM personas_ayuda WHERE IDper = f_IDper;
+BEGIN 
+OPEN c_MontAyud;
+FETCH c_MontAyud INTO v_codayu ;
+WHILE c_MontAyud%FOUND LOOP
+
+    Select Monto INTO v_monto
+     from Vale_Digital where  cod_ayuda=v_codayu;
+    v_montoT:=v_Monto+ v_montoT;
+    FETCH c_MontAyud INTO v_codayu ;
+END LOOP;
+CLOSE c_MontAyud;
+RETURN v_montoT;
+END  CalcularMonto;
+/
+CREATE OR REPLACE TRIGGER T_INPerso
+AFTER INSERT ON Personas
+FOR EACH ROW
+BEGIN
+INSERT INTO historial_personas Values(SEQHIST.nextval,:NEW.IDper,:NEW.Cedula,:NEW.Nombre,:NEW.Apellido,:NEW.estado_de_contrto,:NEW.Cod_Zona,:NEW.Cod_empresa,'IN',0,User);
+END T_INPerso;
+/
+CREATE OR REPLACE TRIGGER T_UPPerso
+AFTER UPDATE ON Personas
+FOR EACH ROW
+Declare 
+v_monto vale_digital.monto%TYPE;
+BEGIN
+v_monto:=CalcularMonto(:NEW.IDper);
+INSERT INTO historial_personas Values(SEQHIST.nextval,:NEW.IDper,:NEW.Cedula,:NEW.Nombre,:NEW.Apellido,:NEW.estado_de_contrto,:NEW.Cod_Zona,:NEW.Cod_empresa,'UP',v_monto,User);
+END T_UPPerso;
+/
+
+
+
+
+
+
+
+
+
+
+

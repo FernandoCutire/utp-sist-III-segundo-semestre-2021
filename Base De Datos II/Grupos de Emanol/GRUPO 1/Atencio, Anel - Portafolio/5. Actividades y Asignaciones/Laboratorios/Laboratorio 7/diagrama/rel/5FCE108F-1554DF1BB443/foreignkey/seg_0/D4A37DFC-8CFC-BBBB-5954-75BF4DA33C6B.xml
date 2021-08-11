@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D4A37DFC-8CFC-BBBB-5954-75BF4DA33C6B" containerWithKeyObject="9379DB8A-0D0A-7E6C-92DC-562B0B593A71" localFKIndex="22B5AA62-15CB-320D-D84A-3C65663231A8" name="ID_AHO_AHORRO_FK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>ID_AHO_AHORRO_FK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:50:48 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<importedID>74373687-E1C9-59C4-30BA-4A6C16B15B3A</importedID>
+<referredTableLongName>LAB7_P.TIPO_AHORRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B61C507B-5761-9014-5717-92283E416FA4</referredTableID>
+<keyObject>408A7136-734D-BE27-F8FD-0575C91668E3</keyObject>
+<referredKeyID>408A7136-734D-BE27-F8FD-0575C91668E3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_AHORRO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

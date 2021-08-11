@@ -1,0 +1,270 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="74757FB9-256A-830C-E25A-A4CF97601861" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="PRESTAMO">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>PRESTAMO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO" id="A71B387A-3A75-11AB-CF6F-C930BA8BF99D">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>ID_TIPO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9B59705-2973-5217-6C9C-53DA51489EAF" referredColumn="6E042B79-0EEF-44D6-14A0-DE92B0415A9B"/>
+</associations>
+</Column>
+<Column name="ID_CLIENTE" id="088115E0-ADFB-CF22-F181-1BA6B6940A69">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>ID_CLIENTE</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6B8082B2-7938-5A2C-D74F-E6A695F37CF3" referredColumn="2625374C-FDC8-961A-F8D6-DE54CF2891D7"/>
+</associations>
+</Column>
+<Column name="NUM_PRESTAMO" id="2006A4CD-20C3-E26D-3EC0-6AC52AC4DEE9">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>NUM_PRESTAMO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_APROB" id="DEDFA65E-A769-3053-93C6-76FFF3518144">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>FECHA_APROB</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTO_APROB" id="B28FE939-B4A1-92DD-CF9E-1443ACBB3BB6">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>MONTO_APROB</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LETRA_MENSUAL" id="0C35811E-8F4D-E96D-0EC6-74FD1439D111">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>LETRA_MENSUAL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTO_PAGO" id="1CAE1958-5C8B-C8E4-7A15-EAE7025FDBF5">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>MONTO_PAGO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_PAGO" id="714F3DBE-F4CD-2010-7CDC-3E58D2F23465">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>FECHA_PAGO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_SUCURSAL" id="2FB80D45-BF18-F5B7-CDF8-EDF43C242005">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>COD_SUCURSAL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D8CDA91-8C29-FDE3-667E-4F22AAE5F7EA" referredColumn="E72CE9CA-4A99-2F6C-674B-BBA2EF94B278"/>
+</associations>
+</Column>
+<Column name="SALDO_ACTUAL" id="5800FF0F-9304-9914-382F-28764A5B6CEF">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>SALDO_ACTUAL</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTERES_PAGADO" id="6DDD4F41-940F-4639-A014-130A33028280">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>INTERES_PAGADO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_MODIF" id="2953FC74-7A82-A2DB-0EF8-3D840A6FD3CB">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>FECHA_MODIF</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO" id="4B6B24A7-5916-3C4B-6F72-6E4760DE9CD7">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>PRESTAMO</sourceObjSchema>
+<sourceObjName>USUARIO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2F4F6C5-05BE-1D0B-5E78-91F2568CF7E9" name="ID_CL_TIPO_PREST_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>ID_CL_TIPO_PREST_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A71B387A-3A75-11AB-CF6F-C930BA8BF99D"/>
+<colUsage columnID="088115E0-ADFB-CF22-F181-1BA6B6940A69"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="916A2E4F-4D7C-09BF-24DF-F76970DF6814" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="ID_CL_TIPO_PREST_PK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>ID_CL_TIPO_PREST_PK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A71B387A-3A75-11AB-CF6F-C930BA8BF99D"/>
+<colUsage columnID="088115E0-ADFB-CF22-F181-1BA6B6940A69"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08319780-0776-7185-F323-9E412591C87B" schemaObject="B999B53D-8EB3-B1A2-4468-82D8B9B1D2B5" name="NUMERO_PRESTAMO">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB6</sourceObjSchema>
+<sourceObjName>NUMERO_PRESTAMO</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2006A4CD-20C3-E26D-3EC0-6AC52AC4DEE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38B471B6-657E-7273-1D72-7A4A801B3A5F" name="COD_SUC_PRES_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2FB80D45-BF18-F5B7-CDF8-EDF43C242005"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E028BC2-FBC9-B3D9-9867-15C9C134EF48" name="ID_CLIENTE_PREST_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="088115E0-ADFB-CF22-F181-1BA6B6940A69"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C10B6956-9603-BA95-0F39-A2A4BE8ABDAC" name="ID_TIPO_FK">
+<createdBy>Anel_</createdBy>
+<createdTime>2020-10-25 22:50:49 UTC</createdTime>
+<ownerDesignName>diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A71B387A-3A75-11AB-CF6F-C930BA8BF99D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

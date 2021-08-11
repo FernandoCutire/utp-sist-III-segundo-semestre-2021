@@ -1,0 +1,24 @@
+CREATE TABLE temp_table (
+    id_col number,
+    char_col varchar2(30)
+);
+
+DECLARE
+    -- Registro para almacenar la información acerca de una clase.
+    v_RoomData rooms%ROWTYPE;
+BEGIN
+    -- Extraer la información sobre la clase ID -1
+    SELECT * INTO v_RoomData
+    FROM rooms
+    WHERE room_id = -1;
+    /* La siguiente orden no se ejecutará nunca, 
+    ya que el control pasa inmediatamente al gestor de excepciones */
+    IF SQL%NOTFOUND THEN
+        INSERT INTO temp_table ( char_col) VALUES ( 'Not Found');
+    END IF;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+        INSERT INTO temp_table (char_col) VALUES ('Not Found, Excpetion Handler');
+END;
+
+select * from temp_table;

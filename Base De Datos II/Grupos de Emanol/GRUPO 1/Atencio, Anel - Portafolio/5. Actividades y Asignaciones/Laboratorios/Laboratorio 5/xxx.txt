@@ -1,0 +1,240 @@
+drop table email cascade constraint;
+drop table email_cliente cascade constraint;
+drop table prestamo cascade constraint;
+drop table telefono cascade constraint;
+drop table telefono_cliente cascade constraint;
+drop table tipo_prestamo cascade constraint;
+drop table profesion cascade constraint;
+drop table cliente cascade constraint;
+
+create table PROFESION (
+ID_Pro number not null,
+profesion varchar2 (30) not null,
+constraint ID_Pro_pk primary key (ID_Pro)
+);
+
+
+create table TIPO_PRESTAMO (
+ID_tipo number not null,
+tipo varchar2 (30) not null,
+tasa_interes number not null,
+constraint ID_tipo_pk primary key (ID_tipo)
+);
+
+
+create table EMAIL (
+ID_email number not null,
+Tipo_email varchar2 (20) not null,
+constraint ID_email_pk primary key (ID_email)
+);
+
+
+create table TELEFONO (
+ID_telefono number not null,
+Tipo_telefono varchar2 (20) not null,
+constraint ID_telefono_pk primary key (ID_telefono)
+);
+
+
+create table CLIENTE (
+ID_Cliente number not null,
+ID_Pro number not null,
+cedula varchar2 (20) not null,
+nombre varchar2 (30) not null,
+apellido varchar2 (30) not null,
+sexo char not null,
+fecha_nac date not null,
+constraint ID_Cliente_pk primary key (ID_Cliente),
+constraint ID_prof_fk foreign key (ID_Pro) references PROFESION (ID_Pro)
+);
+
+create table EMAIL_CLIENTE (
+ID_email number not null,
+ID_Cliente number not null,
+email varchar2 (40) not null,
+constraint ID_email_fk foreign key (ID_email) references EMAIL (ID_email),
+constraint ID_Cl_email_fk foreign key (ID_Cliente) references CLIENTE (ID_Cliente),
+constraint ID_email_cl_pk primary key (ID_email, ID_Cliente)
+ );
+
+
+create table TELEFONO_CLIENTE (
+ID_telefono number not null,
+ID_Cliente number not null,
+telefono varchar2 (20) not null,
+constraint ID_tel_fk foreign key (ID_telefono) references TELEFONO (ID_telefono),
+constraint ID_cl_tel_fk foreign key (ID_Cliente) references CLIENTE (ID_Cliente),
+constraint ID_telef_cl_pk primary key (ID_telefono, ID_Cliente)
+);
+
+
+create table PRESTAMO (
+ID_tipo number not null,
+ID_Cliente number not null,
+Num_prestamo number not null,
+fecha_aprob date not null,
+monto_aprob number not null,
+letra_mensual number not null,
+monto_pago number not null,
+fecha_pago date not null,
+constraint ID_tipo_fk foreign key (ID_tipo) references TIPO_PRESTAMO (ID_tipo),
+constraint ID_cliente_prest_fk foreign key (ID_Cliente) references CLIENTE (ID_Cliente),
+constraint ID_cl_tipo_prest_pk primary key (ID_tipo, ID_Cliente)
+);
+
+create unique index numero_prestamo on PRESTAMO (Num_prestamo);
+
+-----------------------------------------------------------------------------------------------
+
+alter table CLIENTE
+add edad number not null;
+
+create table SUCURSAL (
+Cod_sucursal number not null,
+Nombre_sucursal varchar2 (30) not null,
+Constraint Cod_suc_pk primary key (Cod_sucursal)
+);
+
+create table SUCURSAL_PRESTAMO(
+Cod_sucursal number not null,
+ID_tipo number not null,
+Constraint ID_tipo_suc_fk foreign key (ID_tipo) references TIPO_PRESTAMO (ID_tipo),
+Constraint Cod_sucursal_p_fk foreign key (Cod_sucursal) references SUCURSAL (Cod_sucursal),
+Constraint Cod_id_suc_pk primary key (Cod_sucursal, ID_tipo),
+Monto_prestamo number not null
+);
+
+Alter table CLIENTE
+Add (Cod_sucursal number not null, constraint Cod_suc_cl_fk foreign key (Cod_sucursal) references SUCURSAL (Cod_sucursal));
+Alter table PRESTAMO 
+Add (Cod_sucursal number not null, constraint Cod_suc_pres_fk foreign key (Cod_sucursal) references SUCURSAL (Cod_sucursal));
+
+alter table PRESTAMO
+ADD (saldo_actual number not null, interes_pagado number not null, fecha_modif date not null, usuario varchar2 (30) not null);
+
+create table transact_pagos (
+ID_transaccion number not null,
+constraint ID_transaccion_pk primary key (ID_transaccion), 
+Cod_sucursal number not null,
+ID_Cliente number not null, 
+ID_tipo number not null,
+Fechatransaccion date not null,
+Monto_pago number not null,
+Fecha_insercion date not null,
+Usuario varchar2 (30) not null
+);
+
+-----------------------------------------------------------------------------------------------------------------------
+
+CREATE SEQUENCE email_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE;
+ 
+ 
+ 
+ CREATE SEQUENCE telefono_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+
+
+CREATE SEQUENCE profesion_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+
+
+CREATE SEQUENCE tipo_prestamo_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+ 
+ 
+ 
+ CREATE SEQUENCE sucursales_sequence
+ START WITH     1
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+
+-----------------------------------------------------------------------------------------------------------------------
+
+CREATE OR REPLACE PROCEDURE add_email (
+    p_id_email      IN email.id_email%TYPE,
+    p_tipo_email    IN email.tipo_email%TYPE
+    ) AS
+BEGIN
+    INSERT INTO email (id_email, tipo_email)
+    VALUES (email_sequence.nextval, p_tipo_email);
+EXCEPTION
+     WHEN NO_DATA_FOUND THEN
+     DBMS_OUTPUT.PUT_LINE ('No se encontró la tabla');
+COMMIT;
+END add_email;
+
+
+
+CREATE OR REPLACE PROCEDURE add_telefono (
+    p_id_telefono      IN telefono.id_telefono%TYPE,
+    p_tipo_telefono    IN telefono.tipo_telefono%TYPE
+    ) AS
+BEGIN
+    INSERT INTO telefono (id_telefono, tipo_telefono)
+    VALUES (telefono_sequence.nextval, p_tipo_telefono);
+EXCEPTION
+     WHEN NO_DATA_FOUND THEN
+     DBMS_OUTPUT.PUT_LINE ('No se encontró la tabla');
+COMMIT;
+END add_telefono;
+
+
+
+CREATE OR REPLACE PROCEDURE add_profesion (
+    p_id_pro      IN profesion.id_pro%TYPE,
+    p_profesion    IN profesion.profesion%TYPE
+    ) AS
+BEGIN
+    INSERT INTO profesion (id_pro, profesion)
+    VALUES (profesion_sequence.nextval, p_profesion);
+EXCEPTION
+     WHEN NO_DATA_FOUND THEN
+     DBMS_OUTPUT.PUT_LINE ('No se encontró la tabla');
+COMMIT;
+END add_profesion;
+
+
+
+CREATE OR REPLACE PROCEDURE add_tipo_prestamo (
+    p_id_tipo           IN tipo_prestamo.id_tipo%TYPE,
+    p_tipo              IN tipo_prestamo.tipo%TYPE,
+    p_tasa_interes      IN tipo_prestamo.tasa_interes%TYPE
+    ) AS
+BEGIN
+    INSERT INTO tipo_prestamo (id_tipo, tipo, tasa_interes)
+    VALUES (tipo_prestamo_sequence.nextval, p_tipo, p_tasa_interes);
+EXCEPTION
+     WHEN NO_DATA_FOUND THEN
+     DBMS_OUTPUT.PUT_LINE ('No se encontró la tabla');
+COMMIT;
+END add_tipo_prestamo;
+
+
+
+CREATE OR REPLACE PROCEDURE add_sucursales (
+    p_cod_sucursal                 IN sucursal.cod_sucursal%TYPE,
+    p_nombre_sucursal              IN sucursal.nombre_sucursal%TYPE
+    ) AS
+BEGIN
+    INSERT INTO sucursal (cod_sucursal, nombre_sucursal)
+    VALUES (sucursales_sequence.nextval, p_nombre_sucursal);
+EXCEPTION
+     WHEN NO_DATA_FOUND THEN
+     DBMS_OUTPUT.PUT_LINE ('No se encontró la tabla');
+COMMIT;
+END add_sucursales;

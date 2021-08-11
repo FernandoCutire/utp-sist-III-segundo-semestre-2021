@@ -1,0 +1,104 @@
+Pruebas
+---ZONA
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+	Crear_zona('San Miguelito',611.52,370009,v_error);
+	Crear_zona('Arraiján',721.00,220779,v_error);
+	Crear_zona('Colón Centro',624.00,206553,v_error);
+	Crear_zona('Bocas del Toro',548.48,16135,v_error);
+	Crear_zona('Anton',657.79,54632,v_error);
+	Crear_zona('Portobelo',576.16,9183,v_error);
+	Crear_zona('Changinola',443.04,82604,v_error);
+	Crear_zona('David',744.63,206809,v_error);
+	Crear_zona('Chitre',631.8,50684,v_error);
+	Crear_zona('Omar Torrijos Herrera',584.48, 2248,v_error);
+	Crear_zona('Pese',594.88,12397,v_error);
+	Crear_zona('Boquete',673.91,21370,v_error);
+	Crear_zona('Las Tablas',584.48,27146,v_error);
+	Crear_zona('La Chorrera',599.04,161470,v_error);
+	Crear_zona('Tonosi',554.84,9787,v_error);
+	dbms_output.put_line(v_error);
+END;
+/
+---Empresa
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+	Crear_Empresa('Empresa Panameña de Alimentos','Activa',5000,'Avenida José Agustín Arango, Juan Díaz.',v_error);
+	Crear_Empresa('Pet Panama, S.A.','Activa',900,'Centro Industrial Costa Del Este, Bodega Al Lado De Sika',v_error);
+	Crear_Empresa('Hidroca Panamá','Activa',800,'Costa del Este, Parque Industrial, Edif. Hidroca, Calle Segunda, Panamá',v_error);
+	Crear_Empresa('Empresas Carbone S.A. International','Activa',500,'Calle 5ta, Dos Ríos Abajo',v_error);
+	Crear_Empresa('Fumitex Panamá','Activa',200,'Calle 74 Este, San Francisco Edif. Centro Profesional Plaza Golf, Oficina 1 B',v_error);
+	Crear_Empresa('Rocayol Safety y Industrial Center','Activa',250,'Calle Tomás Armuelles Vía Principal David, Chiriquí',v_error);
+	Crear_Empresa('RefriStore - Panama Viejo Business','Activa',100,'Panama Viejo Business Center Bodega G4.',v_error);
+	Crear_Empresa('VARELA HERMANOS, S.A.','Activa',3000,'Via Tocumen Frente a Refrescos Nacionales, calle del MOP',v_error);
+	Crear_Empresa('SOCIEDAD DE ALIMENTOS DE PRIMERA, S.A. / BONLAC','Activa',2000,'VIA TOCUMEN, EDIFICIO BONLAC, LOCAL 1, San Miguelito, 8',v_error);
+	Crear_Empresa('Industrias Murcia, S.A.','Inactiva',150,'Calle 13 Rio Abajo con, Av. La Pulida, Panamá',v_error);
+	Crear_Empresa('Aditivos de Panamá S.A','Inactiva',100,'Vía Cincuentenario, Panamá',v_error);
+	Crear_Empresa('PANAMCOM S.A.','Inactiva',100,'PH Green Point, Calle El Saril, Panamá',v_error);
+	Crear_Empresa('Gold Mills de Panamá, S.A.','Activa',2000,'Calle 65 Oeste, Panamá',v_error);
+	Crear_Empresa('Prestige Design Panamá','Inactiva',150,'PH quatier, Calle 74 Este, Panamá',v_error);
+	Crear_Empresa('INVEGSA.S.A.(INVERSIONES GUERRA, S.A.)','Inactiva',100,' bella vista calle 37 con ave. peru edificio manuel henriquez apto. 310',v_error);
+	dbms_output.put_line(v_error);
+END;
+/
+---Persoanas
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+	Crear_Personas('1-492-842','Benisio','Robinson',TO_DATE('1984/03/01','yyyy/mm/dd'),'Inactivo',04,08,v_error);
+	Crear_Personas('2-873-12','Yeniseth','Sandoval',TO_DATE('1983/05/07','yyyy/mm/dd'),'Inactivo',05,07,v_error);
+	Crear_Personas('3-513-538','Aminta','Meléndez',TO_DATE('1990/02/15','yyyy/mm/dd'),'Inactivo',06,01,v_error);
+	Crear_Personas('1-902-78','Yesica','Romero',TO_DATE('1984/09/27','yyyy/mm/dd'),'Inactivo',07,14,v_error);
+	Crear_Personas('4-320-45','Antonio','Arauz',TO_DATE('1980/10/04','yyyy/mm/dd'),'Inactivo',08,06,v_error);
+	Crear_Personas('6-781-456','Juan Carlos','Huerta',TO_DATE('1970/01/21','yyyy/mm/dd'),'Inactivo',09,10,v_error);
+	Crear_Personas('3-85-2517','Eulalio ','Ruiz',TO_DATE('1985/05/20','yyyy/mm/dd'),'Inactivo',10,15,v_error);
+	Crear_Personas('4-410-203','Joswar','Alvarado',TO_DATE('1993/09/23','yyyy/mm/dd'),'Inactivo',12,06,v_error);
+	Crear_Personas('6-141-432','Erick','Guerrero',TO_DATE('1994/04/21','yyyy/mm/dd'),'Inactivo',11,08,v_error);
+	Crear_Personas('7-890-391','Angel','Barrios',TO_DATE('1984/09/07','yyyy/mm/dd'),'Inactivo',13,08,v_error);
+	Crear_Personas('8-732-39','Héctor ','Carrasquilla',TO_DATE('1995/11/13','yyyy/mm/dd'),'Inactivo',01,09,v_error);
+	Crear_Personas('3-945-131','Porfirio','Meléndez',TO_DATE('1987/11/23','yyyy/mm/dd'),'Inactivo',03,11,v_error);
+	Crear_Personas('8-842-09','Tomás','Velásquez',TO_DATE('1984/06/10','yyyy/mm/dd'),'Inactivo',14,14,v_error);
+	Crear_Personas('7-012-67','Angel','Domínguez',TO_DATE('1980/05/19','yyyy/mm/dd'),'Inactivo',15,05,v_error);
+	Crear_Personas('8-54-9192','Rollyns ','Rodrígues',TO_DATE('1985/10/07','yyyy/mm/dd'),'Inactivo',02,12,v_error);
+	dbms_output.put_line(v_error);
+END;
+/
+----Vale digital
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+Crear_Vale(80,v_error);
+Crear_Vale(100,v_error);
+Crear_Vale(100,v_error);
+dbms_output.put_line(v_error);
+END;
+/
+-----Suministrar vale
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+SuministrarVale(1,v_error);
+SuministrarVale(2,v_error);
+dbms_output.put_line(v_error);
+END;
+/
+
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+SuministrarVale(1,v_error);
+dbms_output.put_line(v_error);
+END;
+/
+----Estado de contrato
+
+DECLARE 
+	v_error varchar2(100);
+BEGIN
+ActuaEstCont(1,'Activo',v_error);
+dbms_output.put_line(v_error);
+END;
+/
+Select * From Historial_Personas;

@@ -1,0 +1,64 @@
+insert into Cliente values (1, '5-753-1482', 'Walter', 'Abadi', 'Masculino', TO_DATE('18/01/1986'), 'Profesor');
+insert into Cliente values (2, '8-797-1540', 'Ovidio', 'Medina', 'Masculino', TO_DATE('24/02/1967'), 'Ingeniero Mecánico');
+insert into Cliente values (3, '8-592-570', 'Abdiel', 'Bárcenas', 'Masculino', TO_DATE('30/10/1977'), 'Doctor Pediatra');
+insert into Cliente values (4, '8-950-843', 'Yohanis', 'Castillero', 'Femenino', TO_DATE('12/01/1994'), 'Arquitecta');
+insert into Cliente values (5, '4-100-1278', 'Tatiana', 'Ávila', 'Femenino', TO_DATE('21/07/1985'), 'Enfermera');
+insert into Cliente values (6, '2-783-1156', 'José', 'Godoy', 'Masculino', TO_DATE('25/04/1980'), 'Abogado');
+insert into Cliente values (7, '6-37-10', 'Judith', 'Pineda', 'Femenino', TO_DATE('14/11/1962'), 'Ingeniera Industrial');
+insert into Cliente values (8, '3-845-1023', 'Paola', 'Garcia', 'Femenino', TO_DATE('13/09/1979'), 'Ingeniera Civil');
+insert into Cliente values (9, '1-852-688', 'Milagros', 'Gonzales', 'Femenino', TO_DATE('01/03/1982'), 'Empresaria');
+insert into Cliente values (10, '5-230-1128', 'Juan', 'Pitti', 'Masculino', TO_DATE('28/07/1976'), 'Cirujano Dental');
+
+---------------------------------------------------------------------------------------------------------
+
+insert into Prestamos values (1, 2, 'Hipoteca', TO_DATE('25/03/2017'), 70000, 4, 1289.16, 77349.60, TO_DATE('15/04/2022'));
+insert into Prestamos values (2, 1, 'Auto', TO_DATE('14/02/2018'), 35000, 5, 806.03, 38689.44, TO_DATE('15/03/2022'));	
+insert into Prestamos values (3, 9, 'Hipoteca', TO_DATE('12/10/2018'), 150000, 4, 3386.86, 153386.86, TO_DATE('1/10/2022'));
+insert into Prestamos values (4, 4, 'Personal', TO_DATE('12/01/2019'), 15000, 6, 664.81, 15955.44, TO_DATE('15/02/2021'));
+insert into Prestamos values (5, 7, 'Personal', TO_DATE('30/05/2019'), 20000, 5, 1712.15, 20545.80, TO_DATE('15/06/2020'));
+insert into Prestamos values (6, 3, 'Garantizado con Ahorros', TO_DATE('23/09/2019'), 4000, 10, 351.66, 4219.92, TO_DATE('15/10/2020'));
+insert into Prestamos values (7, 2, 'Garantizado con Ahorros', TO_DATE('13/10/2019'), 8000, 12, 376.59, 9038.16, TO_DATE('15/11/2021'));
+insert into Prestamos values (8, 5, 'Auto', TO_DATE('02/11/2019'), 40000, 8, 1253.45, 45124.20, TO_DATE('15/12/2022'));	
+insert into Prestamos values (9, 6, 'Auto', TO_DATE('18/11/2019'), 45000, 4, 828.74, 49724.40, TO_DATE(01/12/2024));	
+insert into Prestamos values (10, 8, 'Personal', TO_DATE('12/12/2019'), 7000, 10, 615.41, 7384.92, TO_DATE('01/01/2021'));
+insert into Prestamos values (11, 1, 'Hipoteca', TO_DATE('15/02/2020'), 80000, 3, 1770.75, 84996, TO_DATE('1/03/2024'));
+insert into Prestamos values (12, 10, 'Garantizado con Ahorros', TO_DATE('05/03/2019'), 10000, 5, 856.07, 10272.84, TO_DATE('15/03/2020'));
+insert into Prestamos values (13, 9, 'Garantizado con Ahorros', TO_DATE('05/03/2020'), 10000, 9, 874.51, 10494.12, TO_DATE('01/04/2021'));
+insert into Prestamos values (14, 4, 'Hipoteca', TO_DATE('11/04/2020'), 100000, 3, 1796.87, 107812.20, TO_DATE('1/05/2024'));
+insert into Prestamos values (15, 7, 'Auto', TO_DATE('15/05/2020'), 20000, 6, 608.44, 21903.84, TO_DATE('01/06/2023'));
+insert into Prestamos values (16, 8, 'Auto', TO_DATE('04/06/2020'), 30000, 7, 1343.18, 32236.32, TO_DATE('15/06/2022'));
+insert into Prestamos values (17, 3, 'Auto', TO_DATE('04/06/2020'), 25000, 7, 771.93, 27789.48, TO_DATE('01/07/2023'));
+insert into Prestamos values (18, 8, 'Garantizado con Ahorros', TO_DATE('1/08/2020'), 3000, 10, 263.75, 3165, TO_DATE('1/09/2021'));
+insert into Prestamos values (19, 6, 'Personal', TO_DATE('07/08/2020'), 5000, 10, 439.58, 5274.96, TO_DATE('01/09/2021'));
+insert into Prestamos values (20, 10, 'Personal', TO_DATE('17/09/2020'), 20000, 5, 877.43, 21058.32, TO_DATE('30/10/2022'));
+insert into Prestamos values (21, 9, 'Auto', TO_DATE('27/09/2020'), 20000, 15, 969.73, 23273.52, TO_DATE('15/10/2022'));
+insert into Prestamos values (22, 6, 'Hipoteca', TO_DATE('29/09/2020'), 200000, 2, 3505.55, 210333, TO_DATE('20/10/2025'));
+insert into Prestamos values (23, 4, 'Garantizado con Ahorros', TO_DATE('01/10/2020'), 1000, 20, 92.63, 1111.56, TO_DATE('01/11/2021'));
+insert into Prestamos values (24, 5, 'Personal', TO_DATE('05/10/2020'), 5000, 15, 451.29, 5415.48, TO_DATE('01/11/2021'));
+insert into Prestamos values (25, 7, 'Garantizado con Ahorros', TO_DATE('10/10/2020'), 15000, 5, 1284.11, 15409.32, TO_DATE('15/11/2021'));
+
+--------------------------------------------------------------------------------------------------------------
+
+insert into telefono_cliente values (1, '6005-7102', '231-1957', '6889-1665', '6592-1274');
+insert into telefono_cliente values (2, '6312-0276', '231-7194', '6289-7237', '6679-5311');
+insert into telefono_cliente values (3, '6104-8691', '387-3511', '6564-5166', null);
+insert into telefono_cliente values (4, '6898-5207', '387-2418', '6862-1201', null);
+insert into telefono_cliente values (5, '6281-9866', null, '6370-5930', '6006-9300');
+insert into telefono_cliente values (6, '6070-7278', '231-2645', '6786-0247', '6048-6100');
+insert into telefono_cliente values (7, '6854-4593', '385-9832', '6736-3138', null);
+insert into telefono_cliente values (8, '6835-7739', null, '6991-6075', '6050-7910');
+insert into telefono_cliente values (9, '6015-7219', '386-3815', '6216-0882', null);
+insert into telefono_cliente values (10, '6764-8040', null, '6094-5708', '6094-1720');
+
+--------------------------------------------------------------------------------------------------------------
+
+insert into email_cliente values (1, 'walter.abadi@gmail.com', 'walter.abadi@utp.ac.pa', null);
+insert into email_cliente values (2, 'ovidio_medina@hotmail.com', 'ovidio.medina@mop.gob.pa', null);
+insert into email_cliente values (3, 'abdiel.barcenas@gmail.com', 'abdiel.barcenas@minsa.gob.pa', null);
+insert into email_cliente values (4, 'castillero_yohanis@hotmail.com', 'yohanis.castillero@mop.gob.pa', 'yohanis.castillero@up.ac.pa');
+insert into email_cliente values (5, 'tatiana_avila@hotmail.com', 'tatiana.avila@minsa.gob.pa', 'tatiana.avila@up.ac.pa');
+insert into email_cliente values (6, 'godoy.jose@gmail.com', null, null);
+insert into email_cliente values (7, 'judith_pineda@gmail.com', 'judith.pineda@utp.ac.pa', null);
+insert into email_cliente values (8, 'paolagarcia@hotmail.com', 'paola.garcia@utp.ac.pa', null);
+insert into email_cliente values (9, 'milagros.gonzales@gmail.com', null, null);
+insert into email_cliente values (10, 'pitti_juan@hotmail.com', 'juan.pitti@megasmile.pa', 'juan.pitti@up.ac.pa');

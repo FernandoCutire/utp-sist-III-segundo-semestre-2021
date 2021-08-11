@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="745B33D0-0ED9-F0FF-79DE-B91E1A2A7B99" containerWithKeyObject="05CDA1C8-C5F1-972A-AD16-F10F479E55B4" localFKIndex="5B483F0A-FA5A-2597-E6F3-1C79D822B993" name="SUC_AHORRO_FK">
+<sourceConnName>XE</sourceConnName>
+<sourceObjSchema>LAB7_P</sourceObjSchema>
+<sourceObjName>SUC_AHORRO_FK</sourceObjName>
+<createdBy>Anel_</createdBy>
+<createdTime>2020-11-07 19:30:07 UTC</createdTime>
+<ownerDesignName>diagrama 2</ownerDesignName>
+<referredTableLongName>LAB7_P.SUCURSAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E364B33A-0205-6759-8027-0CF28E15DB4F</referredTableID>
+<keyObject>D6BC8573-2E1E-91C9-E86F-4CB850850EAE</keyObject>
+<referredKeyID>D6BC8573-2E1E-91C9-E86F-4CB850850EAE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COD_SUCURSAL</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,88 @@
+1- Tabla zona
+CREATE OR REPLACE PROCEDURE Crear_zona(
+p_nombre Zona.Nombre_Zona%TYPE,
+p_ingreso Zona.Ingresos_Medios%TYPE,
+p_poblac Zona.Poblacion%TYPE,
+p_error out varchar2)AS
+BEGIN
+INSERT INTO Zona(Cod_Zona,Nombre_Zona,Ingresos_Medios,Poblacion)
+	VALUES(SEQCodZona.NEXTVAL,p_nombre,p_ingreso,p_poblac);
+p_error := 'Registro Creado';
+	EXCEPTION 
+	WHEN DUP_VAL_ON_INDEX THEN 
+	p_error := 'Tipo de ahorro existente';
+	WHEN OTHERS THEN 
+	p_error := 'No se creo el registro';
+COMMIT;
+END Crear_zona;
+/
+////////////////////////////////////////////////////////////////////////////////
+2- Tabla empresa
+CREATE OR REPLACE PROCEDURE Crear_Empresa(
+p_nombre Empresa.Nombre%TYPE,
+p_EstAct Empresa.Estado_actual%TYPE,
+p_TotEmp Empresa.Total_Empleados%TYPE,
+p_Ubi Empresa.Ubicacion%TYPE,
+p_error out varchar2)AS
+BEGIN
+INSERT INTO Empresa(Cod_empresa,Nombre,Estado_actual,Total_Empleados,Ubicacion)
+	VALUES(SEQCodemp.NEXTVAL,p_nombre,p_EstAct,p_TotEmp,p_Ubi);
+p_error := 'Registro Creado';
+	EXCEPTION 
+	WHEN DUP_VAL_ON_INDEX THEN 
+	p_error := 'Tipo de ahorro existente';
+	WHEN OTHERS THEN 
+	p_error := 'No se creo el registro';
+COMMIT;
+END Crear_Empresa;
+/
+////////////////////////////////////////////////////////////////////////////////
+3- Tabla Persoanas
+CREATE OR REPLACE FUNCTION CalEdad
+(F_nacimien Personas.Fecha_cumple%TYPE) 
+RETURN NUMBER AS
+BEGIN
+RETURN FLOOR (months_between (sysdate, F_nacimien)/12);
+END CalEdad;
+/
+CREATE OR REPLACE PROCEDURE Crear_Personas(
+p_ceduc Personas.Cedula%TYPE,
+p_nombre Personas.Nombre%TYPE,
+p_apelli Personas.Apellido%TYPE,
+p_fecha Personas.Fecha_cumple%TYPE,
+p_estadcont Personas.estado_de_contrto%TYPE,
+p_codzona Personas.Cod_Zona%TYPE,
+p_codemp Personas.Cod_empresa%TYPE,
+p_error out varchar2)AS
+v_Edad  Personas.Edad%TYPE;
+BEGIN
+v_Edad :=CalEdad(p_fecha);
+INSERT INTO Personas (IDper,Cedula,Nombre,Apellido,Fecha_cumple,Edad,estado_de_contrto,Cod_Zona,Cod_empresa)
+	VALUES(SEQIDPer.NEXTVAL,p_ceduc,p_nombre,p_apelli,p_fecha,v_Edad,p_estadcont,p_codzona,p_codemp);
+p_error := 'Registro Creado';
+	EXCEPTION 
+	WHEN DUP_VAL_ON_INDEX THEN 
+	p_error := 'Tipo de ahorro existente';
+	WHEN OTHERS THEN 
+	p_error := 'No se creo el registro';
+COMMIT;
+END Crear_Personas;
+/
+///////////////////////////////////////////////////////////
+4-Crear vale Digital
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CREATE OR REPLACE PROCEDURE Crear_Vale(
+p_monto Vale_digital.Monto%TYPE,
+p_error out varchar2)AS
+BEGIN
+INSERT INTO Vale_digital(Cod_ayuda,Monto,Fecha)
+	VALUES(SEQVale.NEXTVAL,p_monto,sysdate);
+p_error := 'Registro Creado';
+	EXCEPTION 
+	WHEN DUP_VAL_ON_INDEX THEN 
+	p_error := 'Vale existente';
+	WHEN OTHERS THEN 
+	p_error := 'No se creo el registro';
+COMMIT;
+END Crear_Vale;
+/

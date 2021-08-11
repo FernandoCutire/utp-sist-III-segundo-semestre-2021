@@ -1,0 +1,26 @@
+set serveroutput on;
+DECLARE
+	v_RoomID    classes.room_id%TYPE;
+	v_Building  rooms.building%TYPE;
+	v_Department    classes.department%TYPE;
+	v_Course    classes.course%TYPE;
+
+	CURSOR c_Building (v_Department    classes.department%TYPE, v_Course    classes.course%TYPE) IS
+		SELECT building
+		FROM rooms, classes
+		WHERE rooms.room_id = classes.room_id
+		AND department = v_Department
+		AND course = v_Course;
+
+BEGIN
+	-- Asignar las variables de Acoplamiento antes de abrir el cursor
+	v_Department := 'Matematicas';
+	v_Course := 'Calculo 1';
+	
+	OPEN c_Building ('Bellas Artes', 'Dibujo 2');
+    FETCH c_Building INTO v_building;
+        v_Department := 'Ciencias Naturales';
+        v_Course := 'Quimica';
+        dbms_output.put_line('El Edificio es el: ' || v_building);
+    CLOSE c_Building;
+END;
