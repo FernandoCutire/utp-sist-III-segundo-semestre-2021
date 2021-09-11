@@ -1,6 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="LAB7_P" directorySegmentName="seg_0" id="292C14E3-9BDF-4416-FE92-9FAB27818897">
-<createdBy>Anel_</createdBy>
-<createdTime>2020-11-07 19:30:06 UTC</createdTime>
-<ownerDesignName>diagrama 2</ownerDesignName>
-</SchemaObject>
